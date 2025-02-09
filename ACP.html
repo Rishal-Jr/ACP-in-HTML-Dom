@@ -1,19 +1,28 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title id="demo">
-      ACP
-    </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Manipulation</title>
+</head>
 
 <body>
-    <button onclick="myfunction()">Click me!</button>
-    <p id="result"></p>
-      <p id="result1"></p>
+  <h1>DOM Manipulation Example</h1>
+  <div>
+    <p id="sourceNode">This is the source node.</p>
+    <p id="targetNode">This is the target node.</p>
+  </div>
+  <button onclick="assignValue()">Assign Value</button>
 
-    <script src="script.js">
+  <script>
+    function assignValue() {
 
-    </script>
+      const sourceNode = document.getElementById('sourceNode').innerText;
+
+      document.getElementById('targetNode').innerText = sourceNode;
+    }
+  </script>
 </body>
-</head>
 
 </html>
